@@ -41,6 +41,8 @@ class NewsCell: UITableViewCell {
         if let img = articles.urlToImage {
             imageNews.sd_setImage(with: URL(string: img))
             imageNews.heightAnchor.constraint(equalToConstant: 220).isActive = true
+        } else {
+           imageNews.isHidden = true
         }
             
     }
