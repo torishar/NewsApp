@@ -30,13 +30,9 @@ class NewsCell: UITableViewCell {
     
     func setCell (_ articles: Articles) {
         
-        
         author.text = articles.author
         title.text = articles.title
         descriptionLabel.text = articles.description
-  
-        
-        
         
         if let img = articles.urlToImage {
             imageNews.sd_setImage(with: URL(string: img))
