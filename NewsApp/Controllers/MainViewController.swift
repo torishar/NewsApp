@@ -9,7 +9,6 @@ import UIKit
 
 class MainViewController: UIViewController {
     
-    //как корректнее?
     var tableView: UITableView!
     
     let service = Service()
@@ -50,7 +49,7 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     private func setupTableView () {
-        //let tableView = UITableView(frame: self.view.bounds)
+        
         tableView = UITableView(frame: CGRect(x: 0, y: 120, width: self.view.bounds.width, height: self.view.bounds.height))
         self.view.addSubview(tableView)
         

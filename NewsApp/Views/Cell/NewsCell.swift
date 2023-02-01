@@ -12,6 +12,8 @@ class NewsCell: UITableViewCell {
 
     static let reuseID = "NewsCell"
     
+    @IBOutlet weak var viewNewsCell: UIView!
+    
     @IBOutlet weak var author: UILabel!
     
     @IBOutlet weak var title: UILabel!
@@ -25,11 +27,6 @@ class NewsCell: UITableViewCell {
         // Initialization code
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        
-    }
     
     func setCell (_ articles: Articles) {
         
@@ -37,10 +34,17 @@ class NewsCell: UITableViewCell {
         author.text = articles.author
         title.text = articles.title
         descriptionLabel.text = articles.description
+  
+        
+        
         
         if let img = articles.urlToImage {
             imageNews.sd_setImage(with: URL(string: img))
+            imageNews.heightAnchor.constraint(equalToConstant: 220).isActive = true
         }
+            
     }
     
 }
+    
+
